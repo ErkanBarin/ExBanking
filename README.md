@@ -4,6 +4,8 @@
 
 This project automates the testing of the ExBanking API using Playwright. It includes a mock server for simulating API endpoints and a CSV file for user data storage.
 
+---
+
 ## **API Endpoints**
 
 The mock server implements the following API endpoints:
@@ -32,19 +34,21 @@ The mock server implements the following API endpoints:
    - **Endpoint:** `/send`  
    - **Body:** `{ "from_username": "string", "to_username": "string", "amount": number }`
 
+---
+
 ## **Setup Instructions**
 
 ### **Install Dependencies**
 Run the following command to install required dependencies:
-
+```bash
 npm install
-
+```
 
 ### **Start the Mock Server**
 Start the mock server using:
-
+```bash
 npm run start-mock-server
-
+```
 The server will run at `http://localhost:3000`.
 
 ---
@@ -57,8 +61,9 @@ The server will run at `http://localhost:3000`.
 
 ### **Run All Tests**
 Execute all tests using:
+```bash
 npm test
-
+```
 
 ### **Run Specific Test Suites**
 You can run specific test groups with the following commands:
@@ -69,48 +74,6 @@ You can run specific test groups with the following commands:
 - **Send Money Tests:** `npm run test:send`
 - **Positive Tests:** `npm run test:positive`
 - **Negative Tests:** `npm run test:negative`
-
----
-
-## **Test Case Documentation**
-
-### **Functional Test Cases**
-Each API has both positive and negative test cases, tagged for selective execution. 
-
-#### **1. Create User**
-- **Requirement:** Users can create new accounts.
-- **Test Cases:**
-  - Positive: Create a new user successfully.
-  - Negative: Attempt to create a user with an existing username.
-
-#### **2. Deposit**
-- **Requirement:** Users can add funds to their account.
-- **Test Cases:**
-  - Positive: Deposit funds into an existing account.
-  - Negative: Attempt to deposit into a non-existent account.
-
-#### **3. Withdraw**
-- **Requirement:** Users can withdraw funds from their account.
-- **Test Cases:**
-  - Positive: Withdraw funds with sufficient balance.
-  - Negative: Attempt to withdraw with insufficient balance.
-
-#### **4. Get Balance**
-- **Requirement:** Users can check their account balance.
-- **Test Cases:**
-  - Positive: Retrieve balance for an existing user.
-  - Negative: Attempt to retrieve balance for a non-existent user.
-
-#### **5. Send Money**
-- **Requirement:** Users can transfer funds between accounts.
-- **Test Cases:**
-  - Positive: Send money between two valid accounts.
-  - Negative: Attempt to send money to a non-existent user or with insufficient balance.
-
-### **Non-Functional Test Cases**
-#### **Performance Testing**
-- **Requirement:** System handles concurrent requests efficiently.
-- **Test Case:** Simulate high traffic for APIs and measure response times.
 
 ---
 
