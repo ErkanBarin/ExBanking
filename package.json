@@ -1,0 +1,32 @@
+{
+  "name": "exbanking-playwright-tests",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "start-mock-server": "node src/mockServer.js",
+    "test:create": "npx playwright test --grep @create",
+    "test:deposit": "npx playwright test --grep @deposit",
+    "test:withdraw": "npx playwright test --grep @withdraw",
+    "test:balance": "npx playwright test --grep @balance",
+    "test:send": "npx playwright test --grep @send",
+    "test:positive": "npx playwright test --grep @positive",
+    "test:negative": "npx playwright test --grep @negative",
+    "test:performance": "npx playwright test --grep @performance"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "express": "^4.21.2",
+    "uuid": "^9.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "csv-parse": "^5.6.0"
+  }
+}

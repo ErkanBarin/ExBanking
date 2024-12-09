@@ -1,0 +1,23 @@
+npm run start-mock-server
+
+Step 2: Create the Mock ServerWrite a mock server in JavaScript using the http module. This server should:Support POST /create_user to create a new user using unique user. if the user is duplicated it should give 400 error
+Support POST /deposit to deposit money to a user’s account. it should check if tthe user exist ,if not it should give 404 error. if the user exist and if the amount is 0 or negative it should give 400 error. 
+Support POST /withdraw to withdraw money from a user’s account. it should check if tthe user exist ,if not it should give 404 error.if it exists and if the amount is greater than the amount it has it should give 400 error.
+Support GET /get_balance to fetch a user’s balance. if the user is not found it should give 404 error
+Support POST /send to transfer money between users. if any of them don't exist it should give 404 error.
+Save user data in memory for now, and later read/write it from/to a CSV file.
+
+username,balance
+john_doe,150
+static_existing_user,0
+user_1733655336397,0
+alice,100
+bob,200
+charlie,200
+david,50
+sender,500
+receiver,100
+poor_sender,50
+rich_receiver,1000
+existing_sender,200
+nonexistent_receiver,100

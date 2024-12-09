@@ -1,0 +1,14 @@
+username,balance
+john_doe,150
+static_existing_user,0
+user_1733655336397,0
+alice,100
+bob,100
+charlie,200
+david,50
+sender,500
+receiver,100
+poor_sender,50
+rich_receiver,1000
+existing_sender,200
+nonexistent_receiver,100
